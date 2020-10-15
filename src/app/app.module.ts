@@ -10,12 +10,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
+import { FileUploadComponent } from './home/file-upload/file-upload.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,9 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatProgressBarModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
