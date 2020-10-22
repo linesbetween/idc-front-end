@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {UploadService} from '../../shared/upload.service';
 
@@ -8,6 +8,10 @@ import {UploadService} from '../../shared/upload.service';
   styleUrls: ['./file-upload.component.scss']
 })
 export class FileUploadComponent implements OnInit {
+  @Input()
+  colorName: string;
+  @Input()
+  shapeName: string;
 
   form: FormGroup;
 
@@ -30,7 +34,6 @@ export class FileUploadComponent implements OnInit {
   onSubmit() {
     const formData = new FormData();
     formData.append('file', this.form.get('files').value);
-
     this.uploadService.upload(formData).subscribe();
   }
 
