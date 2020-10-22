@@ -26,8 +26,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
         AppRoutingModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        MatProgressBarModule,
-        MatCardModule,
         MatIconModule,
         FormsModule,
         ReactiveFormsModule,

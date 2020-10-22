@@ -1,11 +1,7 @@
 <h1>Upload your File!</h1>
 <div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()" fxLayout="column" #uploadForm="ngForm">
-    <mat-form-field>
-      <mat-placeholder>{{colorName}}</mat-placeholder>
-      <input type="file" matInput formControlName="files" id="files" (change)="onFileChange($event)" />
-    </mat-form-field>
-    <button type="submit" mat-raised-button color="primary">Upload</button>
-
+      <input type="file"  formControlName="files" id="files" (change)="onFileChange($event)" />
+    <button type="submit">Upload</button>
   </form>
 </div>
