@@ -1,4 +1,3 @@
-<h1>Upload your File!</h1>
 <div>
   <form [formGroup]="form" (ngSubmit)="onSubmit()" fxLayout="column" #uploadForm="ngForm">
       <input type="file"  formControlName="files" id="files" (change)="onFileChange($event)" />

@@ -13,6 +13,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { FileUploadComponent } from './home/file-upload/file-upload.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
         MatIconModule,
         FormsModule,
         ReactiveFormsModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatGridListModule
     ],
   providers: [],
   bootstrap: [AppComponent]

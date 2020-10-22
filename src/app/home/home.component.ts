@@ -11,16 +11,25 @@ import {catchError, map} from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-  @ViewChild('fileUpload', {static: false})
-  fileUpload: ElementRef;
-  files = [];
+  // @ViewChild('fileUpload', {static: false})
+  // fileUpload: ElementRef;
+  // files = [];
 
-  constructor(private uploadService: UploadService) { }
+  tiles: Tile[] = [
+    {text: 'color0', color: 'red'},
+    {text: 'color1', color: 'yellow'},
+    {text: 'color2', color: 'blue'},
+    {text: 'color3', color: 'orange'},
+    {text: 'color4', color: 'green'},
+    {text: 'color5', color: 'purple'}
+  ];
+
+constructor(private uploadService: UploadService) { }
 
   ngOnInit(): void {
   }
 
-  uploadFile(file) {
+/*  uploadFile(file) {
     const formData = new FormData();
     formData.append('file', file.data);
     file.inProgress = true;
@@ -61,5 +70,10 @@ export class HomeComponent implements OnInit {
       this.uploadFiles();
     };
     fileUpload.click();
-  }
+  }*/
+}
+
+export interface Tile {
+  color: string;
+  text: string;
 }

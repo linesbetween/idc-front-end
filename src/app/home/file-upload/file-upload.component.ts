@@ -9,7 +9,7 @@ import {UploadService} from '../../shared/upload.service';
 })
 export class FileUploadComponent implements OnInit {
   @Input()
-  colorName: string;
+  colorCode: string;
   @Input()
   shapeName: string;
 
@@ -34,7 +34,7 @@ export class FileUploadComponent implements OnInit {
   onSubmit() {
     const formData = new FormData();
     formData.append('file', this.form.get('files').value);
-    this.uploadService.upload(formData).subscribe(
+    this.uploadService.upload(formData, this.colorCode).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     );

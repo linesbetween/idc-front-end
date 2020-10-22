@@ -1,4 +1,11 @@
-<app-file-upload [colorName]="'red'"></app-file-upload>
+
+<mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let tile of tiles"
+  [style.background]="tile.color">
+    {{tile.text}}
+    <app-file-upload [colorCode]="tile.text"></app-file-upload>
+  </mat-grid-tile>
+</mat-grid-list>
 
 <!--<div style="text-align:center; margin-top: 100px; ">-->
 <!--  <mat-card style="margin-top:10px; width: 50%;">-->
