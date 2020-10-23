@@ -1,0 +1,11 @@
+<mat-card id="prediction-card">
+  <mat-card-header></mat-card-header>
+  <mat-card-title>Type your sentence below to find out its category</mat-card-title>
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()" fxLayout="column" #uploadForm="ngForm">
+  <input type="text"  formControlName="searchTerm" id="searchTerm"/>
+  <button type="submit">Search</button>
+</form>
+  <mat-card-content>
+    <span>The sentence's category is {{result}}</span>
+  </mat-card-content>
+</mat-card>

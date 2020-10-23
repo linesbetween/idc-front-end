@@ -14,13 +14,16 @@ import { FileUploadComponent } from './home/file-upload/file-upload.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { SearchBoxComponent } from './home/search-box/search-box.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FileUploadComponent
+    FileUploadComponent,
+    SearchBoxComponent
   ],
     imports: [
         BrowserModule,
@@ -31,7 +34,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
         FormsModule,
         ReactiveFormsModule,
         MatFormFieldModule,
-        MatGridListModule
+        MatGridListModule,
+        MatDividerModule,
+        MatCardModule
     ],
   providers: [],
   bootstrap: [AppComponent]
