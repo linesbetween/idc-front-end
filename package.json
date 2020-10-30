@@ -47,5 +47,7 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
-  }
+  },
+  "start": "http-server-spa dist/idc-front-end index.html 4200",
+  "heroku-postbuild": "ng build --prod && npm install -g http-server-spa"
 }
